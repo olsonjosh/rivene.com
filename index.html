@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rivene - Voice-fast task capture</title>
+    <title>Rivene - Stop losing tasks to the void</title>
     <meta
       name="description"
-      content="Rivene is a local-first Markdown log-based planner for fast capture, lightweight planning, and iPhone plus Apple Watch review."
+      content="Rivene catches tasks the second they show up, then keeps the day in portable Markdown."
     >
-    <meta name="theme-color" content="#f7f8fa">
-    <meta property="og:title" content="Rivene - Voice-fast task capture">
+    <meta name="theme-color" content="#fbfbfc">
+    <meta property="og:title" content="Rivene - Stop losing tasks to the void">
     <meta
       property="og:description"
-      content="A minimalist log-based planner for capturing entries quickly and keeping the Markdown durable."
+      content="Fast capture for loose ends, stray thoughts, and tasks that show up at the worst possible time."
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rivene.com/">
@@ -21,191 +21,56 @@
     <link rel="icon" href="brand/app-icon/rivene-app-icon-faceted-inset-32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="brand/app-icon/rivene-app-icon-faceted-inset-180.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="brand/rivene-logo.css">
     <link rel="stylesheet" href="site.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="/" aria-label="Rivene home">
-        <span class="rivene-icon-css brand__icon" aria-hidden="true">
-          <span class="rivene-mark-css rivene-mark-css--clear-edge"></span>
-        </span>
-        <span class="brand__name">rivene</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#capture">Capture</a>
-        <a href="#markdown">Markdown</a>
-        <a href="#privacy">Privacy</a>
-      </nav>
-      <a class="nav-action" href="mailto:hello@rivene.com?subject=Rivene%20launch%20updates">Updates</a>
-    </header>
+    <main class="page" aria-labelledby="hero-title">
+      <header class="brand" aria-label="Rivene">
+        <img
+          class="brand__icon"
+          src="brand/app-icon/rivene-app-icon-faceted-inset-128.png"
+          alt=""
+          width="40"
+          height="40"
+        >
+        <span>Rivene</span>
+      </header>
 
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__scene" aria-hidden="true">
-          <img
-            class="hero__app-icon device-shadow"
-            src="brand/app-icon/rivene-app-icon-faceted-inset-256.png"
-            alt=""
-          >
-          <div class="hero__phone device-shadow">
-            <div class="phone-status">
-              <span>9:41</span>
-              <span>Today</span>
-            </div>
-            <div class="phone-header">
-              <span>June 14</span>
-              <button type="button" tabindex="-1">Record</button>
-            </div>
-            <div class="daily-log">
-              <div class="log-row is-open">
-                <span class="glyph">&#9675;</span>
-                <span>send Rivene site to early testers</span>
-              </div>
-              <div class="log-row is-done">
-                <span class="glyph">&#9679;</span>
-                <span>capture logo direction</span>
-              </div>
-              <div class="log-row is-moved">
-                <span class="glyph">&gt;</span>
-                <span>roll app store copy forward</span>
-              </div>
-              <div class="log-detail">- Voice note preserved as Markdown</div>
-              <div class="log-row is-open is-active">
-                <span class="glyph">&#9675;</span>
-                <span>add detail under this</span>
-              </div>
-            </div>
-            <div class="capture-bar">
-              <span class="capture-dot"></span>
-              <span>Listening on device</span>
-            </div>
-          </div>
-          <div class="hero__watch device-shadow">
-            <span class="watch-date">Sun 14</span>
-            <span class="watch-line">&#9675; call Ari</span>
-            <span class="watch-line">&#9679; refill coffee</span>
-            <button type="button" tabindex="-1">Record</button>
-          </div>
-          <div class="hero__markdown device-shadow">
-            <code># 2026-06-14</code>
-            <code>- [ ] send Rivene site</code>
-            <code>- [x] capture logo direction</code>
-            <code>- [&gt;] app store copy</code>
-          </div>
-        </div>
-
-        <div class="hero__content">
-          <h1 id="hero-title">Rivene</h1>
-          <p class="hero__lead">
-            Voice-fast task capture for a local-first Markdown log. Open it, speak or type the entry, and keep the source text portable.
-          </p>
-          <div class="hero__actions" aria-label="Rivene actions">
-            <a class="button button--primary" href="mailto:hello@rivene.com?subject=Rivene%20launch%20updates">Get launch updates</a>
-            <a class="button button--secondary" href="#markdown">See the log</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section capture-section" id="capture" aria-labelledby="capture-title">
-        <div class="section__intro">
-          <p class="section__label">Fast capture, low ceremony</p>
-          <h2 id="capture-title">A planner that starts as quickly as a thought arrives.</h2>
-        </div>
-        <div class="workflow" aria-label="Capture workflow">
-          <article class="workflow-step">
-            <span class="step-number">01</span>
-            <h3>Speak from the daily log.</h3>
-            <p>Blank-space capture keeps entry creation close to where your attention already is.</p>
-          </article>
-          <article class="workflow-step">
-            <span class="step-number">02</span>
-            <h3>Tap to keep moving.</h3>
-            <p>Complete, move, backlog, cancel, or edit without turning the log into a project board.</p>
-          </article>
-          <article class="workflow-step">
-            <span class="step-number">03</span>
-            <h3>Review on the watch.</h3>
-            <p>Apple Watch stays focused on the moment: capture, glance, and check off.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section markdown-section" id="markdown" aria-labelledby="markdown-title">
-        <div class="markdown-copy">
-          <p class="section__label">Markdown is the durable artifact</p>
-          <h2 id="markdown-title">The journal is the product.</h2>
+      <section class="hero">
+        <img
+          class="hero__icon"
+          src="brand/app-icon/rivene-app-icon-faceted-inset-256.png"
+          alt=""
+          width="112"
+          height="112"
+        >
+        <div class="hero__copy">
+          <h1 id="hero-title">Stop losing tasks to the void.</h1>
           <p>
-            Rivene reads and writes normal Markdown task lines. State changes rewrite the text instead of hiding your planning history in an opaque database.
+            Say it. Type it. Kill the tab. Rivene catches the day's loose ends in a Markdown log that stays yours.
           </p>
         </div>
-        <div class="markdown-grid">
-          <div class="source-panel" aria-label="Markdown source example">
-            <div class="panel-title">Source</div>
-            <pre><code># Today
-- [ ] Draft launch note
-- [x] Choose app icon
-- [&gt;] App Store screenshots
-- [-] Old landing copy
-  - Keep wording Rivene-native</code></pre>
-          </div>
-          <div class="render-panel" aria-label="Rendered Rivene log example">
-            <div class="panel-title">Rivene</div>
-            <div class="render-row"><span>&#9675;</span> Draft launch note</div>
-            <div class="render-row is-done"><span>&#9679;</span> Choose app icon</div>
-            <div class="render-row is-muted"><span>&gt;</span> App Store screenshots</div>
-            <div class="render-row is-canceled"><span>&#9675;</span> Old landing copy</div>
-            <div class="render-detail">- Keep wording Rivene-native</div>
-          </div>
-        </div>
+        <a class="button" href="mailto:hello@rivene.com?subject=Rivene%20launch%20updates">Tell me when it drops</a>
       </section>
 
-      <section class="section devices-section" aria-labelledby="devices-title">
-        <div class="device-copy">
-          <p class="section__label">iPhone plus Apple Watch</p>
-          <h2 id="devices-title">Use each device for what it is good at.</h2>
-          <p>
-            iPhone is the full planner surface for editing, state changes, reorder, and longer review. Apple Watch is deliberately smaller: one-button capture and glanceable completion.
-          </p>
+      <section class="notes" aria-label="Rivene highlights">
+        <div class="note">
+          <h2>Capture now. Triage later.</h2>
+          <p>Voice or text, before the thought gets cute and disappears.</p>
         </div>
-        <div class="device-rhythm" aria-label="Device roles">
-          <div class="rhythm-line">
-            <span>iPhone</span>
-            <strong>Plan, edit, move, and refine the daily log.</strong>
-          </div>
-          <div class="rhythm-line">
-            <span>Watch</span>
-            <strong>Capture the moment and check off what is done.</strong>
-          </div>
-          <div class="rhythm-line">
-            <span>Markdown</span>
-            <strong>Keep the same source of truth underneath both.</strong>
-          </div>
+        <div class="note">
+          <h2>Markdown, not a black box.</h2>
+          <p>Your log stays readable, portable, and yours.</p>
         </div>
-      </section>
-
-      <section class="section privacy-section" id="privacy" aria-labelledby="privacy-title">
-        <div class="privacy-mark" aria-hidden="true">
-          <span class="rivene-mark-css rivene-mark-css--clear-edge"></span>
+        <div class="note">
+          <h2>Private speech or no speech.</h2>
+          <p>On iPhone, Rivene requires on-device recognition.</p>
         </div>
-        <div>
-          <p class="section__label">Private by default</p>
-          <h2 id="privacy-title">Speech should not quietly leave the device.</h2>
-          <p>
-            On physical devices, Rivene requires on-device recognition for iPhone speech capture. If local recognition is unavailable, recording is disabled instead of silently falling back to server recognition.
-          </p>
-        </div>
-      </section>
-
-      <section class="final-cta" aria-labelledby="final-title">
-        <h2 id="final-title">A fast log for work, errands, and the stray thoughts that become plans.</h2>
-        <a class="button button--primary" href="mailto:hello@rivene.com?subject=Rivene%20launch%20updates">Get launch updates</a>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>rivene</span>
-      <span>Local-first Markdown planning for iPhone and Apple Watch.</span>
+    <footer class="footer">
+      <span>Coming for iPhone, Apple Watch, and the tasks that keep ambushing you.</span>
     </footer>
   </body>
 </html>
