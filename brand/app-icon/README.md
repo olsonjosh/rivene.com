@@ -20,4 +20,8 @@ This folder preserves the selected faceted inset app icon treatment.
 - `rivene-app-icon-faceted-inset-64.png` is a compact preview/export.
 - `rivene-app-icon-faceted-inset-32.png` is the smallest legibility check.
 
+The `rivene-app-icon-faceted-inset-glass-*.png` files are website-only exports
+that preserve the canonical bolt artwork while cooling the warm surface for a
+cleaner, glass-friendlier presentation.
+
 The iOS and watchOS asset catalogs should use the 1024px master image unless the icon direction changes.
