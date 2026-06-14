@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180" role="img" aria-labelledby="rivene-lockup-title rivene-lockup-desc">
+  <title id="rivene-lockup-title">Rivene logo lockup</title>
+  <desc id="rivene-lockup-desc">The Rivene lightning mark with lowercase rivene wordmark and lightning log descriptor.</desc>
+  <defs>
+    <filter id="rivene-clear-edge" x="-45%" y="-45%" width="190%" height="190%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="-1.9" dy="-1.9" stdDeviation="1.05" flood-color="#535e69" flood-opacity="0.36"/>
+      <feDropShadow dx="2.55" dy="2.55" stdDeviation="2.05" flood-color="#ffffff" flood-opacity="0.72"/>
+    </filter>
+  </defs>
+  <style>
+    :root {
+      color: #1d1d1f;
+    }
+
+    .surface {
+      fill: var(--rivene-icon-surface, #f2f4f7);
+    }
+
+    .mark {
+      fill: var(--rivene-mark-color, #cad2db);
+      filter: url(#rivene-clear-edge);
+    }
+
+    .name {
+      fill: var(--rivene-word-color, currentColor);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      font-size: 72px;
+      font-weight: 520;
+      letter-spacing: 0;
+    }
+
+    .descriptor {
+      fill: var(--rivene-descriptor-color, #6e6e73);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      font-size: 24px;
+      font-weight: 430;
+      letter-spacing: 0;
+    }
+  </style>
+  <rect class="surface" x="24" y="26" width="128" height="128" rx="29"/>
+  <svg x="25" y="27" width="126" height="126" viewBox="0 0 126 126">
+    <path class="mark" d="M50 12 L96 69 H68 L76 114 L30 57 H58 Z"/>
+  </svg>
+  <text class="name" x="188" y="89">rivene</text>
+  <text class="descriptor" x="192" y="128">lightning log</text>
+</svg>

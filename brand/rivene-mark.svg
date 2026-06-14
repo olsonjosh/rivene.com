@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" role="img" aria-labelledby="rivene-mark-title rivene-mark-desc">
+  <title id="rivene-mark-title">Rivene mark</title>
+  <desc id="rivene-mark-desc">A top-left to bottom-right lightning mark for Rivene.</desc>
+  <style>
+    :root {
+      color: #cad2db;
+    }
+
+    .rivene-mark {
+      fill: var(--rivene-mark-color, currentColor);
+    }
+  </style>
+  <path class="rivene-mark" d="M50 12 L96 69 H68 L76 114 L30 57 H58 Z"/>
+</svg>
