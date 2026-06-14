@@ -1,6 +1,6 @@
 {
-  "name": "Rivene",
-  "short_name": "Rivene",
+  "name": "rivene",
+  "short_name": "rivene",
   "description": "Voice-fast task capture for a local-first Markdown log.",
   "start_url": "/",
   "display": "standalone",
