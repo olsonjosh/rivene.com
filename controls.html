@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon" href="brand/app-icon/rivene-app-icon-faceted-inset-glass-material-20260615-180.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="preload" href="product/rivene-daily-log-options-glyphs-20260615.jpg" as="image">
-    <link rel="stylesheet" href="site.css?v=20260615-controls-animation">
+    <link rel="stylesheet" href="site.css?v=20260615-screen-recordings">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -100,6 +100,7 @@
                 </div>
                 <div class="sample-transcript" data-demo-target="today-transcript">Listening...</div>
               </div>
+              <video class="control-recording" data-demo-video muted playsinline loop preload="metadata" hidden aria-hidden="true"></video>
             </div>
 
             <div class="control-list">
@@ -157,6 +158,7 @@
                   <span><span class="state-glyph state-glyph--canceled"></span>Cancel</span>
                 </div>
               </div>
+              <video class="control-recording" data-demo-video muted playsinline loop preload="metadata" hidden aria-hidden="true"></video>
             </div>
 
             <div class="control-list">
@@ -201,6 +203,7 @@
                 </div>
                 <span class="sample-done">Done</span>
               </div>
+              <video class="control-recording" data-demo-video muted playsinline loop preload="metadata" hidden aria-hidden="true"></video>
             </div>
 
             <div class="control-list">
@@ -235,6 +238,7 @@
                 <div class="watch-row" data-demo-target="watch-today-rows"><span class="state-glyph state-glyph--open" aria-hidden="true"></span><span>review draft</span></div>
                 <div class="watch-row" data-demo-target="watch-today-rows"><span class="state-glyph state-glyph--done" aria-hidden="true"></span><span>send update</span></div>
               </div>
+              <video class="control-recording" data-demo-video muted playsinline loop preload="metadata" hidden aria-hidden="true"></video>
             </div>
 
             <div class="control-list">
@@ -279,6 +283,24 @@
       const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
       const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
       const controlButtons = Array.from(document.querySelectorAll('[data-control]'));
+      const recordingVersion = '20260615-screen-recordings';
+      const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const controlRecordings = {
+        'today-date': 'product/controls-recordings/date-header.mp4',
+        'today-blank': 'product/controls-recordings/today-blank.mp4',
+        'today-transcript': 'product/controls-recordings/today-transcript.mp4',
+        'today-inline': 'product/controls-recordings/today-inline.mp4',
+        'entries-marker-tap': 'product/controls-recordings/entries-marker-tap.mp4',
+        'entries-marker-hold': 'product/controls-recordings/entries-marker-hold.mp4',
+        'entries-row-swipe': 'product/controls-recordings/entries-row-swipe.mp4',
+        'entries-text-hold': 'product/controls-recordings/entries-text-hold.mp4',
+        'pages-section-menu': 'product/controls-recordings/date-header.mp4',
+        'pages-calendar': 'product/controls-recordings/pages-calendar.mp4',
+        'pages-inactive': 'product/controls-recordings/pages-inactive.mp4',
+        'watch-record': 'product/controls-recordings/watch-new-entry.mp4',
+        'watch-new-entry': 'product/controls-recordings/watch-new-entry.mp4',
+        'watch-today-rows': 'product/controls-recordings/watch-today-rows.mp4'
+      };
 
       function updateDemoTargets(demo, controlName) {
         demo.dataset.activeControl = controlName;
@@ -294,6 +316,45 @@
         demo.classList.add('is-replaying');
       }
 
+      function hideDemoVideo(demo) {
+        const video = demo.querySelector('[data-demo-video]');
+        if (!video) return;
+
+        demo.classList.remove('has-recording');
+        video.hidden = true;
+        video.controls = false;
+        video.pause();
+      }
+
+      function updateDemoVideo(demo, controlName) {
+        const video = demo.querySelector('[data-demo-video]');
+        const panel = demo.closest('[role="tabpanel"]');
+        const recording = controlRecordings[controlName];
+
+        if (!video || !recording || reduceMotionQuery.matches || panel?.hidden) {
+          hideDemoVideo(demo);
+          return;
+        }
+
+        const versionedSource = `${recording}?v=${recordingVersion}`;
+        if (video.getAttribute('src') !== versionedSource) {
+          video.setAttribute('src', versionedSource);
+          video.load();
+        }
+
+        demo.classList.add('has-recording');
+        video.hidden = false;
+        video.controls = false;
+        video.currentTime = 0;
+
+        const playPromise = video.play();
+        if (playPromise) {
+          playPromise.catch(() => {
+            video.controls = true;
+          });
+        }
+      }
+
       function selectControl(control, options = {}) {
         const group = control.closest('.control-list');
         const controls = Array.from(group.querySelectorAll('[data-control]'));
@@ -305,6 +366,7 @@
         if (demo) {
           updateDemoTargets(demo, control.dataset.control);
           replayDemo(demo);
+          updateDemoVideo(demo, control.dataset.control);
         }
 
         if (options.focus) {
@@ -329,7 +391,11 @@
         });
 
         panels.forEach((panel) => {
-          panel.hidden = panel.id !== selectedPanelId;
+          const isSelected = panel.id === selectedPanelId;
+          panel.hidden = !isSelected;
+          if (!isSelected) {
+            panel.querySelectorAll('[data-demo-scope]').forEach(hideDemoVideo);
+          }
         });
 
         const selectedPanel = document.getElementById(selectedPanelId);
@@ -372,6 +438,23 @@
             event.preventDefault();
             const next = event.key === 'Home' ? controls[0] : controls[controls.length - 1];
             selectControl(next, { focus: true });
+          }
+        });
+      });
+
+      document.querySelectorAll('[data-demo-video]').forEach((video) => {
+        video.addEventListener('error', () => {
+          const demo = video.closest('[data-demo-scope]');
+          if (demo) hideDemoVideo(demo);
+        });
+      });
+
+      reduceMotionQuery.addEventListener('change', () => {
+        panels.forEach((panel) => {
+          const selected = panel.querySelector('[data-control][aria-pressed="true"]');
+          if (selected) {
+            const demo = document.querySelector(`[data-demo-scope="${selected.dataset.demo}"]`);
+            if (demo) updateDemoVideo(demo, selected.dataset.control);
           }
         });
       });
