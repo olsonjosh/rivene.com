@@ -88,88 +88,103 @@
 
         <section id="panel-today" class="tab-panel" role="tabpanel" aria-labelledby="tab-today">
           <div class="control-panel-grid">
-            <div class="control-sample control-sample--today" aria-label="Today controls sample">
+            <div class="control-sample control-sample--today" data-demo-scope="today" data-active-control="today-date" aria-label="Today controls sample">
               <div class="sample-phone">
-                <div class="sample-date">Monday, June 15</div>
-                <div class="sample-row"><span class="state-glyph state-glyph--open" aria-hidden="true"></span><span>capture launch notes</span></div>
+                <div class="sample-date" data-demo-target="today-date">Monday, June 15</div>
+                <div class="sample-row" data-demo-target="today-inline"><span class="state-glyph state-glyph--open" aria-hidden="true"></span><span>capture launch notes<span class="sample-caret" aria-hidden="true"></span></span></div>
                 <div class="sample-row"><span class="state-glyph state-glyph--done" aria-hidden="true"></span><span>ship icon polish</span></div>
                 <div class="sample-row sample-row--quiet"><span class="state-glyph state-glyph--moved" aria-hidden="true"></span><span>move screenshot pass</span></div>
-                <div class="sample-blank">
+                <div class="sample-blank" data-demo-target="today-blank">
                   <span>blank capture space</span>
-                  <span class="sample-mic" aria-hidden="true"></span>
+                  <span class="sample-mic" data-demo-target="today-blank" aria-hidden="true"></span>
                 </div>
-                <div class="sample-transcript">Listening...</div>
+                <div class="sample-transcript" data-demo-target="today-transcript">Listening...</div>
               </div>
             </div>
 
             <div class="control-list">
-              <article class="control-card">
-                <h3>Date header</h3>
-                <p>Tap opens section controls. Touch and hold opens the calendar sheet for changing day.</p>
-              </article>
-              <article class="control-card">
-                <h3>Blank space</h3>
-                <p>Tap toggles latched speech capture. Touch and hold records while held. Double tap creates a blank editable entry.</p>
-              </article>
-              <article class="control-card">
-                <h3>Live transcript</h3>
-                <p>Speech appears at the bottom, then commits into Markdown when recording stops.</p>
-              </article>
-              <article class="control-card">
-                <h3>Inline text</h3>
-                <p>Tap entry text to edit in place. Return commits; an empty committed row deletes itself.</p>
-              </article>
+              <button class="control-card" type="button" data-control="today-date" data-demo="today" aria-pressed="true">
+                <span class="control-card__title">Date header</span>
+                <span class="control-card__copy">Tap opens section controls. Touch and hold opens the calendar sheet for changing day.</span>
+              </button>
+              <button class="control-card" type="button" data-control="today-blank" data-demo="today" aria-pressed="false">
+                <span class="control-card__title">Blank space</span>
+                <span class="control-card__copy">Tap toggles latched speech capture. Touch and hold records while held. Double tap creates a blank editable entry.</span>
+              </button>
+              <button class="control-card" type="button" data-control="today-transcript" data-demo="today" aria-pressed="false">
+                <span class="control-card__title">Live transcript</span>
+                <span class="control-card__copy">Speech appears at the bottom, then commits into Markdown when recording stops.</span>
+              </button>
+              <button class="control-card" type="button" data-control="today-inline" data-demo="today" aria-pressed="false">
+                <span class="control-card__title">Inline text</span>
+                <span class="control-card__copy">Tap entry text to edit in place. Return commits; an empty committed row deletes itself.</span>
+              </button>
             </div>
           </div>
         </section>
 
         <section id="panel-entries" class="tab-panel" role="tabpanel" aria-labelledby="tab-entries" hidden>
           <div class="control-panel-grid">
-            <figure class="control-screenshot">
-              <img
-                src="product/rivene-daily-log-options-detail-glyphs-20260615.jpg"
-                alt="Close screenshot of rivene entry state options."
-                width="368"
-                height="390"
-                loading="lazy"
-              >
-              <figcaption>State markers are both status and controls.</figcaption>
-            </figure>
+            <div class="control-sample control-sample--entries" data-demo-scope="entries" data-active-control="entries-marker-tap" aria-label="Entry controls sample">
+              <div class="entry-demo">
+                <div class="entry-demo__row" data-demo-target="entries-marker-tap entries-marker-hold entries-row-swipe entries-text-hold">
+                  <span class="entry-demo__action entry-demo__action--flag">Flag</span>
+                  <span class="entry-demo__action entry-demo__action--delete">Delete</span>
+                  <span class="state-glyph state-glyph--open" data-demo-target="entries-marker-tap entries-marker-hold" aria-hidden="true"></span>
+                  <span class="entry-demo__text" data-demo-target="entries-text-hold">capture launch notes</span>
+                  <span class="entry-demo__handle" data-demo-target="entries-text-hold" aria-hidden="true"></span>
+                </div>
+                <div class="entry-demo__row">
+                  <span class="state-glyph state-glyph--done" aria-hidden="true"></span>
+                  <span class="entry-demo__text">ship icon polish</span>
+                </div>
+                <div class="entry-demo__row entry-demo__row--quiet">
+                  <span class="state-glyph state-glyph--backlog" aria-hidden="true"></span>
+                  <span class="entry-demo__text">backlog settings copy</span>
+                </div>
+                <div class="entry-demo__menu" data-demo-target="entries-marker-hold" aria-hidden="true">
+                  <span><span class="state-glyph state-glyph--open"></span>Open</span>
+                  <span><span class="state-glyph state-glyph--done"></span>Done</span>
+                  <span><span class="state-glyph state-glyph--moved"></span>Move</span>
+                  <span><span class="state-glyph state-glyph--canceled"></span>Cancel</span>
+                </div>
+              </div>
+            </div>
 
             <div class="control-list">
-              <article class="control-card">
-                <h3>Marker tap</h3>
-                <p>Open and done entries quick-toggle. Moved, backlog, canceled, and detail rows stay preserved.</p>
-              </article>
-              <article class="control-card">
-                <h3>Marker hold</h3>
-                <p>Touch and hold the marker to open the state menu, then tap or slide to open, done, moved, backlog, canceled, or detail.</p>
-              </article>
-              <article class="control-card">
-                <h3>Row swipe</h3>
-                <p>Swipe right to flag and move an entry up. Swipe left to delete.</p>
-              </article>
-              <article class="control-card">
-                <h3>Text hold</h3>
-                <p>Touch and hold row text, then drag to reorder the Markdown lines.</p>
-              </article>
+              <button class="control-card" type="button" data-control="entries-marker-tap" data-demo="entries" aria-pressed="true">
+                <span class="control-card__title">Marker tap</span>
+                <span class="control-card__copy">Open and done entries quick-toggle. Moved, backlog, canceled, and detail rows stay preserved.</span>
+              </button>
+              <button class="control-card" type="button" data-control="entries-marker-hold" data-demo="entries" aria-pressed="false">
+                <span class="control-card__title">Marker hold</span>
+                <span class="control-card__copy">Touch and hold the marker to open the state menu, then tap or slide to open, done, moved, backlog, canceled, or detail.</span>
+              </button>
+              <button class="control-card" type="button" data-control="entries-row-swipe" data-demo="entries" aria-pressed="false">
+                <span class="control-card__title">Row swipe</span>
+                <span class="control-card__copy">Swipe right to flag and move an entry up. Swipe left to delete.</span>
+              </button>
+              <button class="control-card" type="button" data-control="entries-text-hold" data-demo="entries" aria-pressed="false">
+                <span class="control-card__title">Text hold</span>
+                <span class="control-card__copy">Touch and hold row text, then drag to reorder the Markdown lines.</span>
+              </button>
             </div>
           </div>
         </section>
 
         <section id="panel-pages" class="tab-panel" role="tabpanel" aria-labelledby="tab-pages" hidden>
           <div class="control-panel-grid">
-            <div class="control-sample control-sample--pages" aria-label="Page controls sample">
+            <div class="control-sample control-sample--pages" data-demo-scope="pages" data-active-control="pages-section-menu" aria-label="Page controls sample">
               <div class="sample-menu">
-                <div class="sample-menu__row sample-menu__row--active"><span class="sample-icon sample-icon--calendar" aria-hidden="true"></span><strong>Daily Log</strong></div>
-                <div class="sample-menu__row"><span class="sample-icon sample-icon--list" aria-hidden="true"></span><strong>Index</strong></div>
-                <div class="sample-menu__row"><span class="sample-icon sample-icon--folder" aria-hidden="true"></span><strong>Projects</strong></div>
-                <div class="sample-menu__row"><span class="sample-icon sample-icon--book" aria-hidden="true"></span><strong>Journal</strong></div>
-                <div class="sample-menu__row"><span class="sample-icon sample-icon--check" aria-hidden="true"></span><strong>Habit Tracker</strong></div>
-                <div class="sample-menu__row"><span class="sample-icon sample-icon--arrow" aria-hidden="true"></span><strong>Future Log</strong></div>
-                <div class="sample-menu__row"><span class="sample-icon sample-icon--tray" aria-hidden="true"></span><strong>Backlog</strong></div>
+                <div class="sample-menu__row sample-menu__row--active" data-demo-target="pages-section-menu"><span class="sample-icon sample-icon--calendar" aria-hidden="true"></span><strong>Daily Log</strong></div>
+                <div class="sample-menu__row" data-demo-target="pages-section-menu pages-inactive"><span class="sample-icon sample-icon--list" aria-hidden="true"></span><strong>Index</strong></div>
+                <div class="sample-menu__row" data-demo-target="pages-section-menu pages-inactive"><span class="sample-icon sample-icon--folder" aria-hidden="true"></span><strong>Projects</strong></div>
+                <div class="sample-menu__row" data-demo-target="pages-section-menu pages-inactive"><span class="sample-icon sample-icon--book" aria-hidden="true"></span><strong>Journal</strong></div>
+                <div class="sample-menu__row" data-demo-target="pages-section-menu pages-inactive"><span class="sample-icon sample-icon--check" aria-hidden="true"></span><strong>Habit Tracker</strong></div>
+                <div class="sample-menu__row" data-demo-target="pages-section-menu pages-inactive"><span class="sample-icon sample-icon--arrow" aria-hidden="true"></span><strong>Future Log</strong></div>
+                <div class="sample-menu__row" data-demo-target="pages-section-menu pages-inactive"><span class="sample-icon sample-icon--tray" aria-hidden="true"></span><strong>Backlog</strong></div>
               </div>
-              <div class="sample-calendar">
+              <div class="sample-calendar" data-demo-target="pages-calendar pages-inactive">
                 <div class="sample-calendar__title">Date</div>
                 <div class="sample-calendar__grid" aria-hidden="true">
                   <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
@@ -181,52 +196,52 @@
             </div>
 
             <div class="control-list">
-              <article class="control-card">
-                <h3>Section menu</h3>
-                <p>Tap the date to switch between Daily Log, Index, Projects, Journal, Habit Tracker, Future Log, and Backlog.</p>
-              </article>
-              <article class="control-card">
-                <h3>Calendar sheet</h3>
-                <p>Touch and hold the date to pick another day, then Done returns to the selected log.</p>
-              </article>
-              <article class="control-card">
-                <h3>Inactive pages</h3>
-                <p>Non-daily-log pages are visible destinations while the current build keeps their bodies intentionally quiet.</p>
-              </article>
+              <button class="control-card" type="button" data-control="pages-section-menu" data-demo="pages" aria-pressed="true">
+                <span class="control-card__title">Section menu</span>
+                <span class="control-card__copy">Tap the date to switch between Daily Log, Index, Projects, Journal, Habit Tracker, Future Log, and Backlog.</span>
+              </button>
+              <button class="control-card" type="button" data-control="pages-calendar" data-demo="pages" aria-pressed="false">
+                <span class="control-card__title">Calendar sheet</span>
+                <span class="control-card__copy">Touch and hold the date to pick another day, then Done returns to the selected log.</span>
+              </button>
+              <button class="control-card" type="button" data-control="pages-inactive" data-demo="pages" aria-pressed="false">
+                <span class="control-card__title">Inactive pages</span>
+                <span class="control-card__copy">Non-daily-log pages are visible destinations while the current build keeps their bodies intentionally quiet.</span>
+              </button>
             </div>
           </div>
         </section>
 
         <section id="panel-watch" class="tab-panel" role="tabpanel" aria-labelledby="tab-watch" hidden>
           <div class="control-panel-grid">
-            <div class="control-sample control-sample--watch" aria-label="Watch controls sample">
+            <div class="control-sample control-sample--watch" data-demo-scope="watch" data-active-control="watch-record" aria-label="Watch controls sample">
               <div class="watch-frame">
                 <div class="watch-title">rivene</div>
                 <div class="watch-section">
                   <strong>Monday, June 15</strong>
                   <span>Daily Log</span>
                 </div>
-                <div class="watch-button">Record</div>
-                <div class="watch-field">New entry</div>
-                <div class="watch-button watch-button--quiet">Add</div>
-                <div class="watch-row"><span class="state-glyph state-glyph--open" aria-hidden="true"></span><span>review draft</span></div>
-                <div class="watch-row"><span class="state-glyph state-glyph--done" aria-hidden="true"></span><span>send update</span></div>
+                <div class="watch-button" data-demo-target="watch-record">Record</div>
+                <div class="watch-field" data-demo-target="watch-new-entry">New entry</div>
+                <div class="watch-button watch-button--quiet" data-demo-target="watch-new-entry">Add</div>
+                <div class="watch-row" data-demo-target="watch-today-rows"><span class="state-glyph state-glyph--open" aria-hidden="true"></span><span>review draft</span></div>
+                <div class="watch-row" data-demo-target="watch-today-rows"><span class="state-glyph state-glyph--done" aria-hidden="true"></span><span>send update</span></div>
               </div>
             </div>
 
             <div class="control-list">
-              <article class="control-card">
-                <h3>Record</h3>
-                <p>Tap Record to focus the watch dictation field.</p>
-              </article>
-              <article class="control-card">
-                <h3>New entry</h3>
-                <p>Dictate or type into the field. The Add control appears once there is text.</p>
-              </article>
-              <article class="control-card">
-                <h3>Today rows</h3>
-                <p>Tap an open or done row to toggle it. Deferred, backlogged, canceled, and detail rows remain log context.</p>
-              </article>
+              <button class="control-card" type="button" data-control="watch-record" data-demo="watch" aria-pressed="true">
+                <span class="control-card__title">Record</span>
+                <span class="control-card__copy">Tap Record to focus the watch dictation field.</span>
+              </button>
+              <button class="control-card" type="button" data-control="watch-new-entry" data-demo="watch" aria-pressed="false">
+                <span class="control-card__title">New entry</span>
+                <span class="control-card__copy">Dictate or type into the field. The Add control appears once there is text.</span>
+              </button>
+              <button class="control-card" type="button" data-control="watch-today-rows" data-demo="watch" aria-pressed="false">
+                <span class="control-card__title">Today rows</span>
+                <span class="control-card__copy">Tap an open or done row to toggle it. Deferred, backlogged, canceled, and detail rows remain log context.</span>
+              </button>
             </div>
           </div>
         </section>
@@ -255,8 +270,50 @@
     <script>
       const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
       const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+      const controlButtons = Array.from(document.querySelectorAll('[data-control]'));
+
+      function updateDemoTargets(demo, controlName) {
+        demo.dataset.activeControl = controlName;
+        demo.querySelectorAll('[data-demo-target]').forEach((target) => {
+          const targets = target.dataset.demoTarget.split(/\s+/);
+          target.classList.toggle('is-demo-target', targets.includes(controlName));
+        });
+      }
+
+      function replayDemo(demo) {
+        demo.classList.remove('is-replaying');
+        void demo.offsetWidth;
+        demo.classList.add('is-replaying');
+      }
+
+      function selectControl(control, options = {}) {
+        const group = control.closest('.control-list');
+        const controls = Array.from(group.querySelectorAll('[data-control]'));
+        controls.forEach((item) => {
+          item.setAttribute('aria-pressed', String(item === control));
+        });
+
+        const demo = document.querySelector(`[data-demo-scope="${control.dataset.demo}"]`);
+        if (demo) {
+          updateDemoTargets(demo, control.dataset.control);
+          replayDemo(demo);
+        }
+
+        if (options.focus) {
+          control.focus();
+        }
+      }
+
+      function selectDefaultControl(panel) {
+        const selected = panel.querySelector('[data-control][aria-pressed="true"]') || panel.querySelector('[data-control]');
+        if (selected) {
+          selectControl(selected);
+        }
+      }
 
       function selectTab(tab) {
+        const selectedPanelId = tab.getAttribute('aria-controls');
+
         tabs.forEach((item) => {
           const isSelected = item === tab;
           item.setAttribute('aria-selected', String(isSelected));
@@ -264,8 +321,13 @@
         });
 
         panels.forEach((panel) => {
-          panel.hidden = panel.id !== tab.getAttribute('aria-controls');
+          panel.hidden = panel.id !== selectedPanelId;
         });
+
+        const selectedPanel = document.getElementById(selectedPanelId);
+        if (selectedPanel) {
+          selectDefaultControl(selectedPanel);
+        }
       }
 
       tabs.forEach((tab, index) => {
@@ -279,6 +341,34 @@
           next.focus();
         });
       });
+
+      controlButtons.forEach((control) => {
+        control.addEventListener('click', () => selectControl(control));
+        control.addEventListener('keydown', (event) => {
+          const group = control.closest('.control-list');
+          const controls = Array.from(group.querySelectorAll('[data-control]'));
+          const index = controls.indexOf(control);
+          const direction = event.key === 'ArrowRight' || event.key === 'ArrowDown'
+            ? 1
+            : event.key === 'ArrowLeft' || event.key === 'ArrowUp'
+              ? -1
+              : 0;
+
+          if (direction !== 0) {
+            event.preventDefault();
+            const next = controls[(index + direction + controls.length) % controls.length];
+            selectControl(next, { focus: true });
+          }
+
+          if (event.key === 'Home' || event.key === 'End') {
+            event.preventDefault();
+            const next = event.key === 'Home' ? controls[0] : controls[controls.length - 1];
+            selectControl(next, { focus: true });
+          }
+        });
+      });
+
+      panels.forEach(selectDefaultControl);
     </script>
   </body>
 </html>
