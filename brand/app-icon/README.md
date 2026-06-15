@@ -4,10 +4,13 @@ This folder preserves the selected faceted inset app icon treatment.
 
 ## Selected Direction
 
-- Warm off-white/silver surface.
+- Cool glass surface with a soft light-to-dark gradient, visible specular shine,
+  and subtle prismatic tinting. Avoid a flat matte tile.
 - Graphite lightning cutout using the canonical Rivene mark geometry.
-- Inset/debossed lighting only: no outside cast shadow.
+- Inset/debossed bolt lighting only: no outside cast shadow around the bolt.
 - Faceted center shadow where the two triangles meet. This is intentional; it should feel like the surface is splitting open rather than like a flat glyph.
+- iOS/watchOS app icon exports must remain square, fully opaque PNGs. Let the
+  system apply the rounded mask.
 
 ## Files
 
@@ -20,8 +23,7 @@ This folder preserves the selected faceted inset app icon treatment.
 - `rivene-app-icon-faceted-inset-64.png` is a compact preview/export.
 - `rivene-app-icon-faceted-inset-32.png` is the smallest legibility check.
 
-The `rivene-app-icon-faceted-inset-glass-*.png` files are website-only exports
-that preserve the canonical bolt artwork while cooling the warm surface for a
-cleaner, glass-friendlier presentation.
+The `rivene-app-icon-faceted-inset-glass-*.png` files preserve the same opaque
+shiny glass master and canonical bolt artwork for website presentation.
 
 The iOS and watchOS asset catalogs should use the 1024px master image unless the icon direction changes.
