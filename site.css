@@ -937,16 +937,11 @@ h1 {
 
 .entry-demo__row {
   position: relative;
-  display: grid;
-  grid-template-columns: 24px minmax(0, 1fr) 18px;
-  gap: 8px;
-  align-items: center;
   min-height: 48px;
-  padding: 11px 9px;
   overflow: hidden;
   border: 1px solid rgba(23, 23, 25, 0.08);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.74);
+  background: rgba(216, 251, 239, 0.42);
   color: var(--ink);
   font-size: 0.93rem;
   box-shadow: 0 8px 18px rgba(18, 24, 32, 0.055);
@@ -956,7 +951,20 @@ h1 {
   color: var(--quiet);
 }
 
-.entry-demo__row .state-glyph,
+.entry-demo__surface {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 18px;
+  gap: 8px;
+  align-items: center;
+  min-height: 48px;
+  padding: 11px 9px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.entry-demo__surface .state-glyph,
 .entry-demo__text,
 .entry-demo__handle {
   position: relative;
@@ -993,13 +1001,11 @@ h1 {
 .entry-demo__action--flag {
   left: 0;
   background: #d8fbef;
-  transform: translateX(-24px);
 }
 
 .entry-demo__action--delete {
   right: 0;
   background: #f4d9d7;
-  transform: translateX(24px);
 }
 
 .entry-demo__menu {
@@ -1044,7 +1050,7 @@ h1 {
   animation: stateMenuReveal 1000ms ease both;
 }
 
-.control-sample--entries.is-replaying[data-active-control="entries-row-swipe"] .entry-demo__row[data-demo-target~="entries-row-swipe"] {
+.control-sample--entries.is-replaying[data-active-control="entries-row-swipe"] .entry-demo__row[data-demo-target~="entries-row-swipe"] .entry-demo__surface {
   animation: rowSwipe 1300ms ease both;
 }
 

@@ -127,20 +127,28 @@
           <div class="control-panel-grid">
             <div class="control-sample control-sample--entries" data-demo-scope="entries" data-active-control="entries-marker-tap" aria-label="Entry controls sample">
               <div class="entry-demo">
-                <div class="entry-demo__row" data-demo-target="entries-marker-tap entries-marker-hold entries-row-swipe entries-text-hold">
+                <div class="entry-demo__row" data-demo-target="entries-row-swipe">
                   <span class="entry-demo__action entry-demo__action--flag">Flag</span>
                   <span class="entry-demo__action entry-demo__action--delete">Delete</span>
-                  <span class="state-glyph state-glyph--open" data-demo-target="entries-marker-tap entries-marker-hold" aria-hidden="true"></span>
-                  <span class="entry-demo__text" data-demo-target="entries-text-hold">capture launch notes</span>
-                  <span class="entry-demo__handle" data-demo-target="entries-text-hold" aria-hidden="true"></span>
+                  <span class="entry-demo__surface" data-demo-target="entries-marker-tap entries-marker-hold entries-text-hold">
+                    <span class="state-glyph state-glyph--open" data-demo-target="entries-marker-tap entries-marker-hold" aria-hidden="true"></span>
+                    <span class="entry-demo__text" data-demo-target="entries-text-hold">capture launch notes</span>
+                    <span class="entry-demo__handle" data-demo-target="entries-text-hold" aria-hidden="true"></span>
+                  </span>
                 </div>
                 <div class="entry-demo__row">
-                  <span class="state-glyph state-glyph--done" aria-hidden="true"></span>
-                  <span class="entry-demo__text">ship icon polish</span>
+                  <span class="entry-demo__surface">
+                    <span class="state-glyph state-glyph--done" aria-hidden="true"></span>
+                    <span class="entry-demo__text">ship icon polish</span>
+                    <span class="entry-demo__handle" aria-hidden="true"></span>
+                  </span>
                 </div>
                 <div class="entry-demo__row entry-demo__row--quiet">
-                  <span class="state-glyph state-glyph--backlog" aria-hidden="true"></span>
-                  <span class="entry-demo__text">backlog settings copy</span>
+                  <span class="entry-demo__surface">
+                    <span class="state-glyph state-glyph--backlog" aria-hidden="true"></span>
+                    <span class="entry-demo__text">backlog settings copy</span>
+                    <span class="entry-demo__handle" aria-hidden="true"></span>
+                  </span>
                 </div>
                 <div class="entry-demo__menu" data-demo-target="entries-marker-hold" aria-hidden="true">
                   <span><span class="state-glyph state-glyph--open"></span>Open</span>
