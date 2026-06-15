@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>rivene controls: iPhone and Watch gestures</title>
+    <meta
+      name="description"
+      content="A concise visual map of rivene controls for the iPhone daily log, entry states, planning pages, and Apple Watch."
+    >
+    <meta name="theme-color" content="#fbfbfc">
+    <meta property="og:title" content="rivene controls">
+    <meta
+      property="og:description"
+      content="A concise visual map of the controls in rivene's Markdown daily log for iPhone and Apple Watch."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rivene.com/controls.html">
+    <meta property="og:image" content="https://rivene.com/brand/app-icon/rivene-app-icon-faceted-inset-glass-512.png">
+    <meta property="og:site_name" content="rivene">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="rivene controls">
+    <meta
+      name="twitter:description"
+      content="A concise visual map of the controls in rivene's Markdown daily log for iPhone and Apple Watch."
+    >
+    <meta name="twitter:image" content="https://rivene.com/brand/app-icon/rivene-app-icon-faceted-inset-glass-512.png">
+    <link rel="canonical" href="https://rivene.com/controls.html">
+    <link rel="icon" href="brand/app-icon/rivene-app-icon-faceted-inset-glass-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="brand/app-icon/rivene-app-icon-faceted-inset-glass-180.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preload" href="product/rivene-daily-log-options-glyphs-20260615.jpg" as="image">
+    <link rel="stylesheet" href="site.css?v=20260615-controls2">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main id="main-content" class="page controls-page" aria-labelledby="controls-title" tabindex="-1">
+      <header class="brand-bar" aria-label="rivene">
+        <a class="brand" href="/" aria-label="rivene home">
+          <img
+            class="brand__icon"
+            src="brand/app-icon/rivene-app-icon-faceted-inset-glass-128.png"
+            alt=""
+            width="40"
+            height="40"
+          >
+          <span>rivene</span>
+        </a>
+        <nav class="site-nav" aria-label="Site">
+          <a href="/">Home</a>
+          <a href="controls.html" aria-current="page">Controls</a>
+        </nav>
+      </header>
+
+      <section class="controls-hero" aria-label="Controls overview">
+        <div class="controls-hero__copy">
+          <h1 id="controls-title">The whole tap dance, mapped.</h1>
+          <p>
+            rivene keeps controls close to the log: date controls in the header, state controls on the marker, editing on the text, capture in the blank space, and quick review on Watch.
+          </p>
+        </div>
+        <figure class="controls-hero__shot">
+          <div class="phone-frame">
+            <img
+              src="product/rivene-daily-log-options-glyphs-20260615.jpg"
+              alt="rivene daily log screenshot showing entry states and row markers."
+              width="368"
+              height="800"
+              fetchpriority="high"
+            >
+          </div>
+          <figcaption>The daily log is the control surface.</figcaption>
+        </figure>
+      </section>
+
+      <section class="control-tabs" aria-labelledby="control-tabs-title">
+        <div class="section-heading">
+          <h2 id="control-tabs-title">Controls by page</h2>
+          <p>Four compact maps cover the iPhone daily log, entry rows, planning page switcher, and Watch companion.</p>
+        </div>
+
+        <div class="tab-strip" role="tablist" aria-label="Control pages">
+          <button id="tab-today" class="tab-button" type="button" role="tab" aria-selected="true" aria-controls="panel-today">Today</button>
+          <button id="tab-entries" class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-entries" tabindex="-1">Entries</button>
+          <button id="tab-pages" class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-pages" tabindex="-1">Pages</button>
+          <button id="tab-watch" class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-watch" tabindex="-1">Watch</button>
+        </div>
+
+        <section id="panel-today" class="tab-panel" role="tabpanel" aria-labelledby="tab-today">
+          <div class="control-panel-grid">
+            <div class="control-sample control-sample--today" aria-label="Today controls sample">
+              <div class="sample-phone">
+                <div class="sample-date">Monday, June 15</div>
+                <div class="sample-row"><span class="state-glyph state-glyph--open" aria-hidden="true"></span><span>capture launch notes</span></div>
+                <div class="sample-row"><span class="state-glyph state-glyph--done" aria-hidden="true"></span><span>ship icon polish</span></div>
+                <div class="sample-row sample-row--quiet"><span class="state-glyph state-glyph--moved" aria-hidden="true"></span><span>move screenshot pass</span></div>
+                <div class="sample-blank">
+                  <span>blank capture space</span>
+                  <span class="sample-mic" aria-hidden="true"></span>
+                </div>
+                <div class="sample-transcript">Listening...</div>
+              </div>
+            </div>
+
+            <div class="control-list">
+              <article class="control-card">
+                <h3>Date header</h3>
+                <p>Tap opens section controls. Touch and hold opens the calendar sheet for changing day.</p>
+              </article>
+              <article class="control-card">
+                <h3>Blank space</h3>
+                <p>Tap toggles latched speech capture. Touch and hold records while held. Double tap creates a blank editable entry.</p>
+              </article>
+              <article class="control-card">
+                <h3>Live transcript</h3>
+                <p>Speech appears at the bottom, then commits into Markdown when recording stops.</p>
+              </article>
+              <article class="control-card">
+                <h3>Inline text</h3>
+                <p>Tap entry text to edit in place. Return commits; an empty committed row deletes itself.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="panel-entries" class="tab-panel" role="tabpanel" aria-labelledby="tab-entries" hidden>
+          <div class="control-panel-grid">
+            <figure class="control-screenshot">
+              <img
+                src="product/rivene-daily-log-options-detail-glyphs-20260615.jpg"
+                alt="Close screenshot of rivene entry state options."
+                width="368"
+                height="390"
+                loading="lazy"
+              >
+              <figcaption>State markers are both status and controls.</figcaption>
+            </figure>
+
+            <div class="control-list">
+              <article class="control-card">
+                <h3>Marker tap</h3>
+                <p>Open and done entries quick-toggle. Moved, backlog, canceled, and detail rows stay preserved.</p>
+              </article>
+              <article class="control-card">
+                <h3>Marker hold</h3>
+                <p>Touch and hold the marker to open the state menu, then tap or slide to open, done, moved, backlog, canceled, or detail.</p>
+              </article>
+              <article class="control-card">
+                <h3>Row swipe</h3>
+                <p>Swipe right to flag and move an entry up. Swipe left to delete.</p>
+              </article>
+              <article class="control-card">
+                <h3>Text hold</h3>
+                <p>Touch and hold row text, then drag to reorder the Markdown lines.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="panel-pages" class="tab-panel" role="tabpanel" aria-labelledby="tab-pages" hidden>
+          <div class="control-panel-grid">
+            <div class="control-sample control-sample--pages" aria-label="Page controls sample">
+              <div class="sample-menu">
+                <div class="sample-menu__row sample-menu__row--active"><span class="sample-icon sample-icon--calendar" aria-hidden="true"></span><strong>Daily Log</strong></div>
+                <div class="sample-menu__row"><span class="sample-icon sample-icon--list" aria-hidden="true"></span><strong>Index</strong></div>
+                <div class="sample-menu__row"><span class="sample-icon sample-icon--folder" aria-hidden="true"></span><strong>Projects</strong></div>
+                <div class="sample-menu__row"><span class="sample-icon sample-icon--book" aria-hidden="true"></span><strong>Journal</strong></div>
+                <div class="sample-menu__row"><span class="sample-icon sample-icon--check" aria-hidden="true"></span><strong>Habit Tracker</strong></div>
+                <div class="sample-menu__row"><span class="sample-icon sample-icon--arrow" aria-hidden="true"></span><strong>Future Log</strong></div>
+                <div class="sample-menu__row"><span class="sample-icon sample-icon--tray" aria-hidden="true"></span><strong>Backlog</strong></div>
+              </div>
+              <div class="sample-calendar">
+                <div class="sample-calendar__title">Date</div>
+                <div class="sample-calendar__grid" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span class="is-selected"></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="sample-done">Done</span>
+              </div>
+            </div>
+
+            <div class="control-list">
+              <article class="control-card">
+                <h3>Section menu</h3>
+                <p>Tap the date to switch between Daily Log, Index, Projects, Journal, Habit Tracker, Future Log, and Backlog.</p>
+              </article>
+              <article class="control-card">
+                <h3>Calendar sheet</h3>
+                <p>Touch and hold the date to pick another day, then Done returns to the selected log.</p>
+              </article>
+              <article class="control-card">
+                <h3>Inactive pages</h3>
+                <p>Non-daily-log pages are visible destinations while the current build keeps their bodies intentionally quiet.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="panel-watch" class="tab-panel" role="tabpanel" aria-labelledby="tab-watch" hidden>
+          <div class="control-panel-grid">
+            <div class="control-sample control-sample--watch" aria-label="Watch controls sample">
+              <div class="watch-frame">
+                <div class="watch-title">rivene</div>
+                <div class="watch-section">
+                  <strong>Monday, June 15</strong>
+                  <span>Daily Log</span>
+                </div>
+                <div class="watch-button">Record</div>
+                <div class="watch-field">New entry</div>
+                <div class="watch-button watch-button--quiet">Add</div>
+                <div class="watch-row"><span class="state-glyph state-glyph--open" aria-hidden="true"></span><span>review draft</span></div>
+                <div class="watch-row"><span class="state-glyph state-glyph--done" aria-hidden="true"></span><span>send update</span></div>
+              </div>
+            </div>
+
+            <div class="control-list">
+              <article class="control-card">
+                <h3>Record</h3>
+                <p>Tap Record to focus the watch dictation field.</p>
+              </article>
+              <article class="control-card">
+                <h3>New entry</h3>
+                <p>Dictate or type into the field. The Add control appears once there is text.</p>
+              </article>
+              <article class="control-card">
+                <h3>Today rows</h3>
+                <p>Tap an open or done row to toggle it. Deferred, backlogged, canceled, and detail rows remain log context.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="state-strip" aria-labelledby="state-strip-title">
+        <div class="section-heading">
+          <h2 id="state-strip-title">The states behind the controls</h2>
+          <p>Every touch ends by keeping the Markdown readable.</p>
+        </div>
+        <div class="state-strip__grid">
+          <span><span class="state-glyph state-glyph--open" aria-hidden="true"></span>Open</span>
+          <span><span class="state-glyph state-glyph--done" aria-hidden="true"></span>Done</span>
+          <span><span class="state-glyph state-glyph--moved" aria-hidden="true"></span>Moved</span>
+          <span><span class="state-glyph state-glyph--backlog" aria-hidden="true"></span>Backlog</span>
+          <span><span class="state-glyph state-glyph--canceled" aria-hidden="true"></span>Canceled</span>
+          <span><span class="state-glyph state-glyph--detail" aria-hidden="true"></span>Detail</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Coming to iPhone and Apple Watch. The gestures stay small because the day already brought enough choreography.</span>
+    </footer>
+
+    <script>
+      const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+      const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+
+      function selectTab(tab) {
+        tabs.forEach((item) => {
+          const isSelected = item === tab;
+          item.setAttribute('aria-selected', String(isSelected));
+          item.tabIndex = isSelected ? 0 : -1;
+        });
+
+        panels.forEach((panel) => {
+          panel.hidden = panel.id !== tab.getAttribute('aria-controls');
+        });
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectTab(tab));
+        tab.addEventListener('keydown', (event) => {
+          const direction = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
+          if (direction === 0) return;
+          event.preventDefault();
+          const next = tabs[(index + direction + tabs.length) % tabs.length];
+          selectTab(next);
+          next.focus();
+        });
+      });
+    </script>
+  </body>
+</html>

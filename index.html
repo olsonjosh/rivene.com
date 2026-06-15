@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>rivene - Capture chaos, keep the Markdown</title>
+    <title>rivene: Capture chaos, keep the Markdown</title>
     <meta
       name="description"
       content="rivene is a fast Markdown daily log for iPhone and Apple Watch. Capture, check off, move, backlog, cancel, and keep the text."
     >
     <meta name="theme-color" content="#fbfbfc">
-    <meta property="og:title" content="rivene - Capture chaos, keep the Markdown">
+    <meta property="og:title" content="rivene: Capture chaos, keep the Markdown">
     <meta
       property="og:description"
       content="A capture-first Markdown log for iPhone and Apple Watch. The interface moves fast. The file stays yours."
@@ -17,24 +17,92 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rivene.com/">
     <meta property="og:image" content="https://rivene.com/brand/app-icon/rivene-app-icon-faceted-inset-glass-512.png">
+    <meta property="og:site_name" content="rivene">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="rivene: Capture chaos, keep the Markdown">
+    <meta
+      name="twitter:description"
+      content="A capture-first Markdown log for iPhone and Apple Watch. The interface moves fast. The file stays yours."
+    >
+    <meta name="twitter:image" content="https://rivene.com/brand/app-icon/rivene-app-icon-faceted-inset-glass-512.png">
     <link rel="canonical" href="https://rivene.com/">
     <link rel="icon" href="brand/app-icon/rivene-app-icon-faceted-inset-glass-32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="brand/app-icon/rivene-app-icon-faceted-inset-glass-180.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="preload" href="product/rivene-daily-log-options-glyphs-20260615.jpg" as="image">
-    <link rel="stylesheet" href="site.css?v=20260615-assets">
+    <link rel="stylesheet" href="site.css?v=20260615-controls2">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "rivene",
+            "applicationCategory": "ProductivityApplication",
+            "operatingSystem": "iOS, watchOS",
+            "url": "https://rivene.com/",
+            "image": "https://rivene.com/brand/app-icon/rivene-app-icon-faceted-inset-glass-512.png",
+            "description": "rivene is a capture-first Markdown daily log for iPhone and Apple Watch.",
+            "dateModified": "2026-06-15"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is rivene?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "rivene is a Markdown-first daily log for iPhone and Apple Watch. It captures entries quickly while keeping the underlying planner as portable text."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does rivene store entries as Markdown?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. rivene rewrites standard Markdown task-list lines for open, done, moved, backlog, canceled, and plain detail entries."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does the Apple Watch app do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Apple Watch app focuses on capture, quick review, and checking off today's entries. iPhone remains the full editing and planning surface."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is speech capture private?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "On physical iPhone devices, rivene requires on-device speech recognition and does not silently fall back to server recognition."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <main class="page" aria-labelledby="hero-title">
-      <header class="brand" aria-label="rivene">
-        <img
-          class="brand__icon"
-          src="brand/app-icon/rivene-app-icon-faceted-inset-glass-128.png"
-          alt=""
-          width="40"
-          height="40"
-        >
-        <span>rivene</span>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main id="main-content" class="page" aria-labelledby="hero-title" tabindex="-1">
+      <header class="brand-bar" aria-label="rivene">
+        <a class="brand" href="/" aria-label="rivene home">
+          <img
+            class="brand__icon"
+            src="brand/app-icon/rivene-app-icon-faceted-inset-glass-128.png"
+            alt=""
+            width="40"
+            height="40"
+          >
+          <span>rivene</span>
+        </a>
+        <nav class="site-nav" aria-label="Site">
+          <a href="controls.html">Controls</a>
+        </nav>
       </header>
 
       <section class="hero" aria-label="rivene overview">
@@ -50,7 +118,10 @@
           <p>
             <span class="wordmark">rivene</span> is a fast daily log for iPhone and Apple Watch. Speak it, type it, check it off, move it, backlog it, cancel it, or leave it as a detail. The interface handles the tap dance. The file stays yours.
           </p>
-          <a class="button" href="mailto:hello@rivene.com?subject=rivene%20launch%20updates">Get launch updates</a>
+          <div class="button-row">
+            <a class="button" href="controls.html">See controls</a>
+            <a class="button button--secondary" href="mailto:hello@rivene.com?subject=rivene%20launch%20updates">Get launch updates</a>
+          </div>
         </div>
 
         <figure class="phone-shot">
@@ -60,6 +131,7 @@
               alt="rivene daily log showing open, done, moved, backlog, struck-through canceled, and plain list item examples."
               width="368"
               height="800"
+              fetchpriority="high"
             >
           </div>
           <figcaption>Actual app screen. No fake metrics. No productivity theater.</figcaption>
