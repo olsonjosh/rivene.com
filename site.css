@@ -317,13 +317,8 @@ h1 {
   color: var(--quiet);
 }
 
-.option--inactive code {
-  color: #69717b;
-}
-
 .option--canceled h3,
-.option--canceled p,
-.option--canceled code {
+.option--canceled p {
   text-decoration: line-through;
   text-decoration-color: currentColor;
   text-decoration-thickness: 0.08em;
