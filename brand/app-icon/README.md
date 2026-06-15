@@ -1,12 +1,12 @@
-# Rivene App Icon
+# rivene app icon
 
 This folder preserves the selected faceted inset app icon treatment.
 
 ## Selected Direction
 
-- Cool glass surface with a soft light-to-dark gradient, visible specular shine,
-  and subtle prismatic tinting. Avoid a flat matte tile.
-- Graphite lightning cutout using the canonical Rivene mark geometry.
+- Cool glass surface with a soft light-to-dark gradient and visible specular
+  shine. Keep corner tinting clean and silver-gray; avoid noisy blue/cyan casts.
+- Graphite lightning cutout using the canonical rivene mark geometry.
 - Inset/debossed bolt lighting only: no outside cast shadow around the bolt.
 - Faceted center shadow where the two triangles meet. This is intentional; it should feel like the surface is splitting open rather than like a flat glyph.
 - iOS/watchOS app icon exports must remain square, fully opaque PNGs. Let the

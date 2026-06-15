@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180" role="img" aria-labelledby="rivene-lockup-title rivene-lockup-desc">
-  <title id="rivene-lockup-title">Rivene logo lockup</title>
-  <desc id="rivene-lockup-desc">The Rivene lightning mark with lowercase rivene wordmark and lightning log descriptor.</desc>
+  <title id="rivene-lockup-title">rivene logo lockup</title>
+  <desc id="rivene-lockup-desc">The rivene lightning mark with lowercase rivene wordmark and lightning log descriptor.</desc>
   <defs>
     <filter id="rivene-clear-edge" x="-45%" y="-45%" width="190%" height="190%" color-interpolation-filters="sRGB">
       <feDropShadow dx="-1.9" dy="-1.9" stdDeviation="1.05" flood-color="#535e69" flood-opacity="0.36"/>

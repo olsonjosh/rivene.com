@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>rivene - Your day is not a dashboard</title>
+    <title>rivene - Capture chaos, keep the Markdown</title>
     <meta
       name="description"
-      content="rivene is a fast daily log for capture-first planning, portable Markdown, and days that refuse to behave like dashboards."
+      content="rivene is a fast Markdown daily log for iPhone and Apple Watch. Capture, check off, move, backlog, cancel, and keep the text."
     >
     <meta name="theme-color" content="#fbfbfc">
-    <meta property="og:title" content="rivene - Your day is not a dashboard">
+    <meta property="og:title" content="rivene - Capture chaos, keep the Markdown">
     <meta
       property="og:description"
-      content="A capture-first Markdown log for iPhone and Apple Watch. Less workflow theater, more useful receipts."
+      content="A capture-first Markdown log for iPhone and Apple Watch. The interface moves fast. The file stays yours."
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rivene.com/">
@@ -21,7 +21,8 @@
     <link rel="icon" href="brand/app-icon/rivene-app-icon-faceted-inset-glass-32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="brand/app-icon/rivene-app-icon-faceted-inset-glass-180.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="site.css?v=20260614-philosophy">
+    <link rel="preload" href="product/rivene-daily-log-options.jpg" as="image">
+    <link rel="stylesheet" href="site.css?v=20260614-finished">
   </head>
   <body>
     <main class="page" aria-labelledby="hero-title">
@@ -36,45 +37,135 @@
         <span>rivene</span>
       </header>
 
-      <section class="hero">
-        <img
-          class="hero__icon"
-          src="brand/app-icon/rivene-app-icon-faceted-inset-glass-256.png"
-          alt=""
-          width="112"
-          height="112"
-        >
+      <section class="hero" aria-label="rivene overview">
         <div class="hero__copy">
-          <h1 id="hero-title">Your day is not a dashboard.</h1>
+          <img
+            class="hero__icon"
+            src="brand/app-icon/rivene-app-icon-faceted-inset-glass-256.png"
+            alt=""
+            width="112"
+            height="112"
+          >
+          <h1 id="hero-title">Capture the chaos. Keep the Markdown.</h1>
           <p>
-            rivene is a fast daily log for the work, errands, ideas, and mildly hostile little tasks that appear mid-thought. Capture first. Triage later. Keep the receipt in Markdown.
+            <span class="wordmark">rivene</span> is a fast daily log for iPhone and Apple Watch. Speak it, type it, check it off, move it, backlog it, cancel it, or leave it as a detail. The interface handles the tap dance. The file stays yours.
           </p>
+          <a class="button" href="mailto:hello@rivene.com?subject=rivene%20launch%20updates">Get launch updates</a>
         </div>
-        <a class="button" href="mailto:hello@rivene.com?subject=rivene%20launch%20updates">Get launch updates</a>
+
+        <figure class="phone-shot">
+          <div class="phone-frame">
+            <img
+              src="product/rivene-daily-log-options.jpg"
+              alt="rivene daily log showing open, done, moved, backlog, canceled, and plain list item examples."
+              width="368"
+              height="800"
+            >
+          </div>
+          <figcaption>Actual app screen. No fake metrics. No productivity theater.</figcaption>
+        </figure>
       </section>
 
-      <section class="notes" aria-label="rivene highlights">
-        <div class="note">
-          <h2>Capture before ceremony.</h2>
-          <p>Speak it, type it, tap it done. No pre-sorting ritual. No productivity cosplay.</p>
+      <section class="intro" aria-label="What rivene is">
+        <div>
+          <h2>A planner that starts as a log.</h2>
+          <p>
+            Capture first. Sort later. Or do not sort at all, a shocking act of personal freedom. Today stays a real record of what happened.
+          </p>
         </div>
-        <div class="note">
-          <h2>The log is the product.</h2>
-          <p>Today stays a real record: done, moved, canceled, details, and all the weird context that mattered for five seconds.</p>
+        <div>
+          <h2>Status without spreadsheet energy.</h2>
+          <p>
+            Done things stay visible. Moved things stay explainable. Canceled things stay dead. Details stay attached. The text underneath is ordinary Markdown, not a mystery vault with a support address.
+          </p>
         </div>
-        <div class="note">
-          <h2>Markdown or it didn't happen.</h2>
-          <p>Every state change leaves portable text behind. Future-you gets receipts, not a mystery database.</p>
+      </section>
+
+      <section class="options" aria-labelledby="options-title">
+        <div class="section-heading">
+          <h2 id="options-title">Six states. Zero ceremony.</h2>
+          <p>Long-press a row marker, pick what actually happened, and rivene rewrites the Markdown. That is the trick. Disturbingly useful.</p>
         </div>
-        <div class="note">
-          <h2>Glass, not glue.</h2>
-          <p>The interface stays light: iPhone for planning, Apple Watch for quick capture, and speech that stays on-device when recording is available.</p>
+
+        <div class="option-grid">
+          <article class="option">
+            <span class="state-glyph state-glyph--open" aria-hidden="true"></span>
+            <div>
+              <h3>Open</h3>
+              <p>A thing still trying to become done. Brave. Annoying. Necessary.</p>
+              <code>- [ ] book dentist</code>
+            </div>
+          </article>
+          <article class="option">
+            <span class="state-glyph state-glyph--done" aria-hidden="true"></span>
+            <div>
+              <h3>Done</h3>
+              <p>Finished, visible, and still part of the day instead of vanishing into a victory fog.</p>
+              <code>- [x] pay invoice</code>
+            </div>
+          </article>
+          <article class="option">
+            <span class="state-glyph state-glyph--moved" aria-hidden="true"></span>
+            <div>
+              <h3>Moved</h3>
+              <p>Not today. Not deleted. Future-you has been served.</p>
+              <code>- [&gt;] prep screenshots</code>
+            </div>
+          </article>
+          <article class="option">
+            <span class="state-glyph state-glyph--backlog" aria-hidden="true"></span>
+            <div>
+              <h3>Backlog</h3>
+              <p>Useful later. Obnoxious now. Into the holding pen.</p>
+              <code>- [&lt;] compare export ideas</code>
+            </div>
+          </article>
+          <article class="option">
+            <span class="state-glyph state-glyph--canceled" aria-hidden="true"></span>
+            <div>
+              <h3>Canceled</h3>
+              <p>Dead on purpose. A clean no with a paper trail.</p>
+              <code>- [-] reply to mystery thread</code>
+            </div>
+          </article>
+          <article class="option">
+            <span class="state-glyph state-glyph--detail" aria-hidden="true"></span>
+            <div>
+              <h3>Detail</h3>
+              <p>Context, notes, links, ingredients, alibis. No checkbox cosplay required.</p>
+              <code>- bring the adapter</code>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="receipt" aria-label="Markdown receipt">
+        <figure class="detail-shot">
+          <img
+            src="product/rivene-daily-log-options-detail.jpg"
+            alt="Close crop of the rivene daily log showing every entry state option."
+            width="368"
+            height="390"
+            loading="lazy"
+          >
+        </figure>
+        <div class="receipt__copy">
+          <h2>Looks calm because the day is not.</h2>
+          <p>
+            Tap, speak, edit, move, cancel. rivene keeps rewriting normal Markdown task lines underneath, so your planner remains portable instead of becoming expensive vapor with tabs.
+          </p>
+          <pre aria-label="Markdown examples"><code>- [ ] open task
+- [x] done task
+- [&gt;] moved forward
+- [&lt;] backlogged
+- [-] canceled
+- plain detail</code></pre>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <span>Coming to iPhone and Apple Watch. For days with too many tabs open, literal and otherwise.</span>
+      <span>Coming to iPhone and Apple Watch. For days that keep opening tabs in your head and then pretending they did not.</span>
     </footer>
   </body>
 </html>

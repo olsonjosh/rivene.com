@@ -1,6 +1,6 @@
-# Rivene Brand Assets
+# rivene brand assets
 
-This folder contains reusable Rivene logo assets based on the selected Clear Edge lightning mark.
+This folder contains reusable rivene logo assets based on the selected Clear Edge lightning mark.
 
 ## Shape Source Of Truth
 

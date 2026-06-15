@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 126" role="img" aria-labelledby="rivene-mark-title rivene-mark-desc">
-  <title id="rivene-mark-title">Rivene mark</title>
-  <desc id="rivene-mark-desc">A top-left to bottom-right lightning mark for Rivene.</desc>
+  <title id="rivene-mark-title">rivene mark</title>
+  <desc id="rivene-mark-desc">A top-left to bottom-right lightning mark for rivene.</desc>
   <style>
     :root {
       color: #cad2db;
